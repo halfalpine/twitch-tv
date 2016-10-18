@@ -24,7 +24,7 @@ function getOnlineChannels() {
         } else {
           offlineChannels.push(channel);
           $.ajax({
-            url: 'https://api.twitch.tv/kraken/streams/' + channel,
+            url: 'https://api.twitch.tv/kraken/channels/' + channel,
             type: 'GET',
             headers: {'Client-ID' : 's1e72h4utecgw5v9jn28pnl6oo8hf94'},
             success: function(data) {
