@@ -8,7 +8,7 @@ $(document).ready(getTwitch());
 
 function getTwitch() {
   getOnlineChannels();
-};
+}
 
 function getOnlineChannels() {
   channelNames.forEach(function(channel) {
@@ -28,7 +28,7 @@ function getOnlineChannels() {
             type: 'GET',
             headers: {'Client-ID' : 's1e72h4utecgw5v9jn28pnl6oo8hf94'},
             success: function(data) {
-              $("#inactive-items").append("<li class='offline'><a href='" + data.url + "' target='_blank'><img class='avatar' src='" + data.logo + "'><span class='title'>" + data.display_name + "</span><span class='offline'>(offline)</span></a></li>")
+              $("#inactive-items").append("<li class='offline'><a href='" + data.url + "' target='_blank'><img class='avatar' src='" + data.logo + "'><span class='title'>" + data.display_name + "</span><span class='offline'>(offline)</span></a></li>");
             }
           });
         }
